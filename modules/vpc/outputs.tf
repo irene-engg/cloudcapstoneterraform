@@ -19,3 +19,9 @@ output "private_subnet_ids" {
     aws_subnet.data_subnet2.id
   ]
 }
+
+output "vpc_id" {
+  description = "The ID of the created VPC"
+  value       = aws_vpc.main.id
+}
+
