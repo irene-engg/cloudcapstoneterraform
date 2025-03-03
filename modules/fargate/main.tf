@@ -1,13 +1,3 @@
-module "vpc" {
-  source = "./modules/vpc"
-}
-
-module "fargate" {
-  source          = "./modules/fargate"
-  vpc_id         = module.vpc.vpc_id          # ✅ Pass VPC ID
-  private_subnets = module.vpc.backend_subnet_cidrs # ✅ Ensure subnets are passed
-}
-
 resource "aws_ecs_cluster" "cloud_cluster" {
   name = "cloud-cluster"
 }
