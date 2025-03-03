@@ -35,35 +35,17 @@ jobs:
 
       - name: Initialize Terraform
         run: terraform init
-        working-directory: modules/vpc  # ✅ Run Terraform inside the VPC module
+        working-directory: cloudcapstoneterraform  # ✅ Run Terraform at the root level
 
       - name: Terraform Validate
         run: terraform validate
-        working-directory: modules/vpc  # ✅ Run Terraform inside the VPC module
+        working-directory: cloudcapstoneterraform  # ✅ Run Terraform at the root level
 
       - name: Terraform Plan
         run: terraform plan -out=tfplan
-        working-directory: modules/vpc  # ✅ Run Terraform inside the VPC module
+        working-directory: cloudcapstoneterraform  # ✅ Run Terraform at the root level
 
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main'  # Only apply on main branch
         run: terraform apply -auto-approve tfplan
-        working-directory: modules/vpc  # ✅ Run Terraform inside the VPC module
-
-        # Steps for Fargate module
-      - name: Initialize Terraform (Fargate)
-        run: terraform init
-        working-directory: modules/fargate  # ✅ Run Terraform inside the Fargate module
-
-      - name: Terraform Validate (Fargate)
-        run: terraform validate
-        working-directory: modules/fargate  # ✅ Run Terraform inside the Fargate module
-
-      - name: Terraform Plan (Fargate)
-        run: terraform plan -out=tfplan
-        working-directory: modules/fargate  # ✅ Run Terraform inside the Fargate module
-
-      - name: Terraform Apply (Fargate)
-        if: github.ref == 'refs/heads/main'  # Only apply on main branch
-        run: terraform apply -auto-approve tfplan
-        working-directory: modules/fargate  # ✅ Run Terraform inside the Fargate module
+        working-directory: cloudcapstoneterraform  # ✅ Run Terraform at the root level
