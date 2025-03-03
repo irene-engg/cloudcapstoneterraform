@@ -3,7 +3,10 @@ output "vpc_id" {
   value       = module.vpc.vpc_id
 }
 
-output "private_subnets" {
-  description = "Private subnet IDs"
-  value       = module.vpc.private_subnet_ids
+output "private_subnet_ids" {
+  value = [
+    aws_subnet.frontend_subnet1.id, aws_subnet.frontend_subnet2.id,
+    aws_subnet.backend_subnet1.id, aws_subnet.backend_subnet2.id,
+    aws_subnet.data_subnet1.id, aws_subnet.data_subnet2.id
+  ]
 }
