@@ -14,9 +14,7 @@ provider "aws" {
 }
 
 module "vpc" {
-  source = "./modules/vpc"
-
-  vpc_cidr_block = var.vpc_cidr_block
+  source = "./modules/vpc"  # Correct path to the VPC module
 }
 
 module "fargate" {
