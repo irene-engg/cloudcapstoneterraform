@@ -14,6 +14,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
+      - name: Debug Directory Structure
+        run: ls -R
+
       - name: Checkout Repository
         uses: actions/checkout@v4
 
