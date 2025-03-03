@@ -4,7 +4,7 @@ provider "aws" {
 
 # Create VPC
 resource "aws_vpc" "vpc_blynk" {
-  cidr_block = var.vpc_cidr
+  cidr_block = var.vpc_cidr_block
   tags = {
     Name = "vpc_blynk"
   }
