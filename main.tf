@@ -21,6 +21,6 @@ module "vpc" {
 
 module "fargate" {
   source          = "./modules/fargate"
-  vpc_id         = modules.vpc.vpc_id
-  private_subnets = modules.vpc.private_subnet_ids
+  vpc_id         = module.vpc.vpc_id
+  private_subnets = module.vpc.private_subnet_ids
 }
