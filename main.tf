@@ -19,7 +19,7 @@ module "vpc" {
 }
 
 module "fargate" {
-  source          = "./modules/fargate"
+  source          = "./.modules/fargate"
   vpc_id         = module.vpc.vpc_id
   private_subnets = module.vpc.private_subnet_ids
 }
