@@ -28,12 +28,3 @@ variable "backend_subnet2" {
   type        = string
 }
 
-variable "data_subnet1" {
-  description = "Data private subnet1"
-  type        = string
-}
-
-variable "data_subnet2" {
-  description = "Data private subnet2"
-  type        = string
-}
