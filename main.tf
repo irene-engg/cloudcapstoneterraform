@@ -23,7 +23,7 @@ module "vpc" {
 module "fargate" {
   source          = "./modules/fargate"
   vpc_id         = module.vpc.vpc_id
-  frontend_subnet1 = var.frontend_subnet1
-  backend_subnet1 =  var.backend_subnet1
+  frontend_subnet1 = module.vpc.frontend_subnet1
+  backend_subnet1 = module.vpc.backend_subnet1
 }
 
