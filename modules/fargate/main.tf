@@ -66,7 +66,7 @@ resource "aws_ecs_service" "frontend_service" {
   desired_count   = 2
 
   network_configuration {
-    subnets         = module.vpc.private_subnet_ids
+    subnets         = var.frontend_subnet1
     security_groups = [aws_security_group.frontend_sg.id]
     assign_public_ip = false
   }
@@ -80,7 +80,7 @@ resource "aws_ecs_service" "backend_service" {
   desired_count   = 2
 
   network_configuration {
-    subnets         = module.vpc.private_subnet_ids
+    subnets         = var.backend_subnet1
     security_groups = [aws_security_group.backend_sg.id]
     assign_public_ip = false
   }
