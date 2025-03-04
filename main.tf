@@ -20,9 +20,9 @@ module "vpc" {
   vpc_cidr_block = var.vpc_cidr_block
 }
 
-#module "fargate" {
-  #source          = "./modules/fargate"
-  #vpc_id         = module.vpc.vpc_id
-  #private_subnets = module.vpc.private_subnet_ids
-#}
+module "fargate" {
+  source          = "./modules/fargate"
+  vpc_id         = module.vpc.vpc_id
+  private_subnets = module.vpc.private_subnet_ids
+}
 
