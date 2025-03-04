@@ -34,21 +34,17 @@ jobs:
 
       - name: Initialize Terraform
         run: terraform init
-        working-directory: cloudcapstoneterraform  # ✅ Ensure correct directory
-
+        
       - name: Terraform Validate
         run: terraform validate
-        working-directory: cloudcapstoneterraform
-
+        
       - name: Terraform Plan
         run: terraform plan -out=tfplan
-        working-directory: cloudcapstoneterraform
-
+       
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main'  # Only apply on main branch
         run: terraform apply -auto-approve tfplan
-        working-directory: cloudcapstoneterraform
-
+        
   destroy-on-failure:
     name: "Destroy Resources on Failure"
     runs-on: ubuntu-latest
@@ -68,4 +64,4 @@ jobs:
 
       - name: Terraform Destroy
         run: terraform destroy -auto-approve
-        working-directory: cloudcapstoneterraform  # ✅ Ensure correct directory
+        
