@@ -1,7 +1,3 @@
-#module "vpc" {
- # source = "../vpc"  # Correct path to the VPC module
-#}
-
 resource "aws_ecs_cluster" "cloud_cluster" {
   name = "cloud-cluster"
 }
