@@ -34,6 +34,9 @@ jobs:
 
       - name: Initialize Terraform
         run: terraform init
+
+      - name: Debug Terraform Variables
+        run: cat terraform.tfvars
         
       - name: Terraform Validate
         run: terraform validate
