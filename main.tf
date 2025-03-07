@@ -17,6 +17,7 @@ provider "aws" {
 # To run the VPC module
 module "vpc" {
   source = "./modules/vpc"
+  aws_region = var.aws_region
 }
 
 /*module "fargate" {
