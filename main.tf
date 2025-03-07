@@ -18,8 +18,8 @@ provider "aws" {
 module "vpc" {
   source = "./modules/vpc"
   aws_region = var.aws_region
-  cidr_block = var.vpc_cidr_block
-  availability_zone = var.availability_zones
+  vpc_cidr_block = var.vpc_cidr_block
+  availability_zones = var.availability_zones
   }
 
 /*module "fargate" {
