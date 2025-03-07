@@ -18,13 +18,9 @@ provider "aws" {
 module "vpc" {
   source = "./modules/vpc"
   aws_region = var.aws_region
-  vpc_cidr_block = var.vpc_cidr_block
-  availability_zones = var.availability_zones
-  public_subnet_cidrs = var.public_subnet_cidrs
-  frontend_subnet_cidrs = var.frontend_subnet_cidrs
-  backend_subnet_cidrs = var.backend_subnet_cidrs
-  data_subnet_cidrs = var.data_subnet_cidrs
-}
+  cidr_block = var.vpc_cidr_block
+  availability_zone = var.availability_zones
+  }
 
 /*module "fargate" {
   #source            = "./modules/fargate"
