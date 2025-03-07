@@ -11,7 +11,7 @@ terraform {
 
 # To create the resources in the specified region
 provider "aws" {
-  region = var.aws_region
+  region = "ca-central-1"
 }
 
 # To run the VPC module
