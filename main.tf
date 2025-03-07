@@ -17,7 +17,6 @@ provider "aws" {
 # To run the VPC module
 module "vpc" {
   source = "./modules/vpc"
-  aws_region = var.aws_region
   vpc_cidr_block = var.vpc_cidr_block
   availability_zones = var.availability_zones
   public_subnet_cidrs = var.public_subnet_cidrs
