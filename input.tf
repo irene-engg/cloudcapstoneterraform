@@ -1,4 +1,4 @@
-variable "vpc_cidr_block" {
+/*variable "vpc_cidr_block" {
   description = "CIDR block for the VPC"
   type        = string
   }
@@ -26,4 +26,4 @@ variable "backend_subnet_cidrs" {
 variable "data_subnet_cidrs" {
   description = "List of CIDR blocks for data subnets"
   type        = list(string)
-  }
+  }*/
