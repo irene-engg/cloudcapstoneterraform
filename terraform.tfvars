@@ -1,4 +1,4 @@
-vpc_cidr_block = "10.0.0.0/16"
+/*vpc_cidr_block = "10.0.0.0/16"
 
 availability_zones = ["ca-central-1a", "ca-central-1b"]
 
@@ -8,4 +8,4 @@ frontend_subnet_cidrs = ["10.0.3.0/24", "10.0.4.0/24"]
 
 backend_subnet_cidrs = ["10.0.5.0/24", "10.0.6.0/24"]
 
-data_subnet_cidrs = ["10.0.7.0/24", "10.0.8.0/24"]
+data_subnet_cidrs = ["10.0.7.0/24", "10.0.8.0/24"]*/
