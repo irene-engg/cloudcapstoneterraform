@@ -17,12 +17,12 @@ provider "aws" {
 # To run the VPC module
 module "vpc" {
   source = "./modules/vpc"
-  vpc_cidr_block = var.vpc_cidr_block
+  /*vpc_cidr_block = var.vpc_cidr_block
   availability_zones = var.availability_zones
   public_subnet_cidrs = var.public_subnet_cidrs
   frontend_subnet_cidrs = var.frontend_subnet_cidrs
   backend_subnet_cidrs = var.backend_subnet_cidrs
-  data_subnet_cidrs = var.data_subnet_cidrs
+  data_subnet_cidrs = var.data_subnet_cidrs*/
   }
 
 /*module "fargate" {
